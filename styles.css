@@ -1,0 +1,90 @@
+body {
+    background:linear-gradient(90deg,rgb(15, 61, 15), green)
+  }
+  
+  header {
+    border-bottom: 1px solid black;
+  }
+  header nav a {
+    margin-right: 20px; 
+  }
+  
+  
+  main section {
+    border: 1px solid black;
+    padding: 10px;
+    overflow: hidden; 
+  }
+  
+  main section img {
+    max-width: 300px; 
+    height: auto;
+    float: left;
+    margin-right: 10px;
+  }
+  
+  main section:nth-child(2) img {
+    max-height: 300px;
+    max-width: 300px;
+    float: right;
+    margin-left: 10px; 
+  }
+
+  
+  main section p {
+    font-size: 18px; 
+    text-shadow: 1px 0px 0px rgb(172, 31, 31);
+  }
+  
+  footer {
+    border-top: 1px solid black;
+    text-align: center;
+    font-size: x-small;
+  }
+  .contact-section {
+    margin: 20px;
+  }
+  
+  .form-field {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    text-shadow: 1px 0px 0px red;
+  }
+  
+  .required {
+    color: red;
+  }
+  
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  input[type="reset"] {
+    background-color: #af4c4c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  input[type="reset"]:hover {
+    background-color: #af4c4c;;
+  }
+  h1{
+    text-align: center;
+  }
+  button{
+    background-color: #45a049;
+    font-weight: lighter;
+    color: white;
+    border-radius: 15%;
+  }

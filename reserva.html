@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reservar</title>
+  <link rel="stylesheet" href="styles.css">
+ 
+</head>
+<body>
+  <main>
+    <section class="contact-section">
+     
+    <button id="Regresar" onclick="Regresar()">Regresar</button>    <h1>Contacto</h1>
+      <form action="submit.php" method="POST">
+        <div class="form-field">
+          <label for="name">Nombre<span class="required">*</span>:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-field">
+          <label for="Telefono">Telefono<span class="required">*</span>:</label>
+          <input type="tel" id="Telefono" name="Telefono"required>
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email<span class="required">*</span>:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-field">
+          <label for="Fecha">Fecha:</label>
+            <input type="date" id="Fecha">
+        </div>
+        <div class="form-field">
+            <label for="Horario">Horario:</label>
+            <select id="Horario" name="Horario">
+              <option value="19:00">19:00</option>
+              <option value="20:00">20:00</option>
+              <option value="21:00">21:00</option>
+              
+            </select>
+          </div>
+
+        <div class="form-field">
+          <label for="canchas">Canchas:</label>
+          <input type="radio" id="canchas" name="canchas" value="F6">F6
+          <input type="radio" id="canchas" name="canchas" value="F7">F7
+          <input type="radio" id="canchas" name="canchas" value="F9">F9
+          <input type="radio" id="canchas" name="canchas" value="F11">F11
+
+        </div>
+        <div class="form-field">
+            <input type="checkbox" id="terms">Terminos y condiciones
+            <input type="checkbox" id="newsletter">Mantenerme al tanto de novedades!
+        </div>
+
+        <div class="form-field">
+          <input type="submit" value="Send">
+        </div>
+        <div class="form-field">
+            <input type="reset" value="Borrar">        </div>
+      </form>
+    </section>
+  </main>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var form = document.querySelector("form");
+  
+      form.addEventListener("submit", function(event) {
+        event.preventDefault(); 
+  
+        
+        var name = document.getElementById("name").value;
+        var telefono = document.getElementById("Telefono").value;
+        var email = document.getElementById("email").value;
+        var fecha = document.getElementById("Fecha").value;
+        var horario = document.getElementById("Horario").value;
+        var canchas = document.querySelector('input[name="canchas"]:checked').value;
+  
+        
+        var reservationInfo = "<strong>Gracias Por Reservar!:</strong><br>" +
+                              "Nombre: " + name + "<br>" +
+                              "Telefono: " + telefono + "<br>" +
+                              "Email: " + email + "<br>" +
+                              "Fecha: " + fecha + "<br>" +
+                              "Horario: " + horario + "<br>" +
+                              "Canchas: " + canchas;
+  
+        
+        var reservationDiv = document.createElement("div");
+        reservationDiv.innerHTML = reservationInfo;
+  
+       
+        var contactSection = document.querySelector(".contact-section");
+        contactSection.appendChild(reservationDiv);
+  
+        var resetButton = document.querySelector("input[type='reset']");
+    resetButton.addEventListener("click", function() {
+      // Clear the reservation information div
+      reservationDiv.innerHTML = "";
+    });
+    });
+});
+    function Regresar() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
