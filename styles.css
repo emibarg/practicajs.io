@@ -1,9 +1,9 @@
 body {
-    background:linear-gradient(90deg,rgb(15, 61, 15), green)
+    background:linear-gradient(90deg,rgb(37, 136, 37), green)
   }
   
   header {
-    border-bottom: 1px solid black;
+    border-bottom: 3px solid white;
   }
   header nav a {
     margin-right: 20px; 
@@ -11,7 +11,7 @@ body {
   
   
   main section {
-    border: 1px solid black;
+    border: 3px solid white;
     padding: 10px;
     overflow: hidden; 
   }
